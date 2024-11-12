@@ -1,0 +1,88 @@
+.body {
+    margin: 0px;
+}
+
+video {
+    width: 99.9%;
+    height: auto;
+}
+
+.images {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 1%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center; 
+  }
+.landscape-container {
+    
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        gap: 1%;
+        max-width: calc(33.33% - 1%);
+        flex-basis: calc(33.33% - 1%);
+        flex-wrap: wrap;
+    }
+
+img.portrait {
+    width: 20%;
+    height: auto;
+    margin-bottom: 1%;
+    max-width: calc(30% - 1%);
+    flex-basis: calc(33.33% - 1%);
+}
+
+img.landscape {
+    width: 100%;
+    height: auto;
+    flex-direction: column; 
+
+}
+
+img {
+    display: flex;
+    width: 20%;
+    height: 10%;
+    gap: 5%;
+}
+
+.slider-container {
+    width: 600px; /* Adjust the width */
+    margin: 50px auto;
+    position: relative;
+    overflow: hidden; /* Hide images outside the container */
+}
+
+.slides {
+    display: flex;
+}
+
+.slide {
+    width: 600px; /* Same as container width */
+    flex-shrink: 0; /* Prevent images from shrinking */
+}
+
+@media screen and (max-width: 1200px) {
+    .images {
+        min-width: 100%;
+        display: block;
+        max-width: fit-content;
+    }
+    img.portrait{
+        width: 100%;
+        max-width: 100%;
+    }
+    img.landscape {
+        width: 100%;
+        max-width: 100%;
+        display: inline;
+    }
+    .landscape-container {
+        width: 100%;
+        max-width: 100%;
+        display: inline;
+    }
+}
